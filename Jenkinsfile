@@ -2,9 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Mensaje de prueba') {
+        stage('Clonar código') {
             steps {
-                echo '¡Hola desde Jenkins! Este es un pipeline de prueba 🎉'
+                git branch: 'main', url: 'https://github.com/ExpertQuasar/MiProyecto.git'
+            }
+        }
+
+        stage('Construir') {
+            steps {
+                echo 'Compilando proyecto...'
+            }
+        }
+
+        stage('Pruebas') {
+            steps {
+                echo 'Ejecutando pruebas...'
             }
         }
     }
