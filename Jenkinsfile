@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar código') {
             steps {
-                git branch: 'main', url: 'https://github.com/usuario/repositorio.git'
+                git branch: 'main', url: 'https://github.com/ExpertQuasar/MiProyecto.git'
             }
         }
 
